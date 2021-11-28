@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO DO LIST</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">TO-DO LIST</h1>
+    <script>
+      var todo = [1, 2, 5, 4];
+      function add_todo_item(index, new_item) {
+        todo.splice(index, 0, new_item);
+      }
+      function show_list() {
+        for (var i = 0; i < todo.length; i = i + 1) {
+          console.log(todo[i]);
+        }
+      }
+      function edit_array(index, edit_element) {
+        todo[index] = edit_element;
+      }
+      function markDone(index) {
+        console.log(todo[index] + "✔");
+      }
+      function delete_element(index) {
+        todo.splice(index, 1);
+      }
+
+      edit_array(2, 3);
+
+      add_todo_item(0, 5);
+      show_list();
+    </script>
+  </body>
+</html>
